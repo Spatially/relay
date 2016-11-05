@@ -1,7 +1,7 @@
 package relay
 
 import (
-	"github.com/graphql-go/graphql"
+	"github.com/Spatially/graphql"
 	"golang.org/x/net/context"
 )
 

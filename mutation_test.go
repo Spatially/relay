@@ -6,11 +6,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/graphql/gqlerrors"
-	"github.com/graphql-go/graphql/language/location"
-	"github.com/graphql-go/graphql/testutil"
-	"github.com/graphql-go/relay"
+	"github.com/Spatially/graphql"
+	"github.com/Spatially/graphql/gqlerrors"
+	"github.com/Spatially/graphql/language/location"
+	"github.com/Spatially/graphql/testutil"
+	"github.com/Spatially/relay"
 	"golang.org/x/net/context"
 )
 

@@ -1,9 +1,9 @@
 package relay_test
 
 import (
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/graphql/testutil"
-	"github.com/graphql-go/relay"
+	"github.com/Spatially/graphql"
+	"github.com/Spatially/graphql/testutil"
+	"github.com/Spatially/relay"
 	"reflect"
 	"testing"
 )

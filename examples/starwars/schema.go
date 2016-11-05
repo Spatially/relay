@@ -2,8 +2,8 @@ package starwars
 
 import (
 	"errors"
-	"github.com/graphql-go/graphql"
-	"github.com/graphql-go/relay"
+	"github.com/Spatially/graphql"
+	"github.com/Spatially/relay"
 	"golang.org/x/net/context"
 )
 

@@ -3,12 +3,13 @@ package relay_test
 import (
 	"errors"
 	"fmt"
+	"reflect"
+	"testing"
+
 	"github.com/Spatially/graphql"
 	"github.com/Spatially/graphql/testutil"
 	"github.com/Spatially/relay"
 	"golang.org/x/net/context"
-	"reflect"
-	"testing"
 )
 
 type photo2 struct {
@@ -46,14 +47,14 @@ var globalIDTestDef = relay.NewNodeDefinitions(relay.NodeDefinitionsConfig{
 			return nil, errors.New("Unknown node type")
 		}
 	},
-	TypeResolve: func(value interface{}, info graphql.ResolveInfo) *graphql.Object {
-		switch value.(type) {
+	TypeResolve: func(info graphql.ResolveTypeParams) *graphql.Object {
+		switch info.Value.(type) {
 		case *user:
 			return globalIDTestUserType
 		case *photo2:
 			return globalIDTestPhotoType
 		default:
-			panic(fmt.Sprintf("Unknown object type `%v`", value))
+			panic(fmt.Sprintf("Unknown object type `%v`", info.Value))
 		}
 	},
 })
